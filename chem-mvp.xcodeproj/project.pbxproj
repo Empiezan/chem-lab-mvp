@@ -1,0 +1,589 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		22539B9320EC379B00A9A063 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22539B9220EC379B00A9A063 /* AppDelegate.swift */; };
+		22539B9520EC379B00A9A063 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22539B9420EC379B00A9A063 /* ViewController.swift */; };
+		22539B9820EC379B00A9A063 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22539B9620EC379B00A9A063 /* Main.storyboard */; };
+		22539B9A20EC37A000A9A063 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22539B9920EC37A000A9A063 /* Assets.xcassets */; };
+		22539B9D20EC37A000A9A063 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22539B9B20EC37A000A9A063 /* LaunchScreen.storyboard */; };
+		22539BA820EC37A000A9A063 /* chem_mvpTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22539BA720EC37A000A9A063 /* chem_mvpTests.swift */; };
+		22539BB320EC37A000A9A063 /* chem_mvpUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22539BB220EC37A000A9A063 /* chem_mvpUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		22539BA420EC37A000A9A063 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 22539B8720EC379B00A9A063 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 22539B8E20EC379B00A9A063;
+			remoteInfo = "chem-mvp";
+		};
+		22539BAF20EC37A000A9A063 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 22539B8720EC379B00A9A063 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 22539B8E20EC379B00A9A063;
+			remoteInfo = "chem-mvp";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		22539B8F20EC379B00A9A063 /* chem-mvp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "chem-mvp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		22539B9220EC379B00A9A063 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		22539B9420EC379B00A9A063 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		22539B9720EC379B00A9A063 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		22539B9920EC37A000A9A063 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		22539B9C20EC37A000A9A063 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		22539B9E20EC37A000A9A063 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		22539BA320EC37A000A9A063 /* chem-mvpTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "chem-mvpTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		22539BA720EC37A000A9A063 /* chem_mvpTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chem_mvpTests.swift; sourceTree = "<group>"; };
+		22539BA920EC37A000A9A063 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		22539BAE20EC37A000A9A063 /* chem-mvpUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "chem-mvpUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		22539BB220EC37A000A9A063 /* chem_mvpUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chem_mvpUITests.swift; sourceTree = "<group>"; };
+		22539BB420EC37A000A9A063 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		22539B8C20EC379B00A9A063 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		22539BA020EC37A000A9A063 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		22539BAB20EC37A000A9A063 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		22539B8620EC379B00A9A063 = {
+			isa = PBXGroup;
+			children = (
+				22539B9120EC379B00A9A063 /* chem-mvp */,
+				22539BA620EC37A000A9A063 /* chem-mvpTests */,
+				22539BB120EC37A000A9A063 /* chem-mvpUITests */,
+				22539B9020EC379B00A9A063 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		22539B9020EC379B00A9A063 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				22539B8F20EC379B00A9A063 /* chem-mvp.app */,
+				22539BA320EC37A000A9A063 /* chem-mvpTests.xctest */,
+				22539BAE20EC37A000A9A063 /* chem-mvpUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		22539B9120EC379B00A9A063 /* chem-mvp */ = {
+			isa = PBXGroup;
+			children = (
+				22539B9220EC379B00A9A063 /* AppDelegate.swift */,
+				22539B9420EC379B00A9A063 /* ViewController.swift */,
+				22539B9620EC379B00A9A063 /* Main.storyboard */,
+				22539B9920EC37A000A9A063 /* Assets.xcassets */,
+				22539B9B20EC37A000A9A063 /* LaunchScreen.storyboard */,
+				22539B9E20EC37A000A9A063 /* Info.plist */,
+			);
+			path = "chem-mvp";
+			sourceTree = "<group>";
+		};
+		22539BA620EC37A000A9A063 /* chem-mvpTests */ = {
+			isa = PBXGroup;
+			children = (
+				22539BA720EC37A000A9A063 /* chem_mvpTests.swift */,
+				22539BA920EC37A000A9A063 /* Info.plist */,
+			);
+			path = "chem-mvpTests";
+			sourceTree = "<group>";
+		};
+		22539BB120EC37A000A9A063 /* chem-mvpUITests */ = {
+			isa = PBXGroup;
+			children = (
+				22539BB220EC37A000A9A063 /* chem_mvpUITests.swift */,
+				22539BB420EC37A000A9A063 /* Info.plist */,
+			);
+			path = "chem-mvpUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		22539B8E20EC379B00A9A063 /* chem-mvp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 22539BB720EC37A000A9A063 /* Build configuration list for PBXNativeTarget "chem-mvp" */;
+			buildPhases = (
+				22539B8B20EC379B00A9A063 /* Sources */,
+				22539B8C20EC379B00A9A063 /* Frameworks */,
+				22539B8D20EC379B00A9A063 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "chem-mvp";
+			productName = "chem-mvp";
+			productReference = 22539B8F20EC379B00A9A063 /* chem-mvp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		22539BA220EC37A000A9A063 /* chem-mvpTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 22539BBA20EC37A000A9A063 /* Build configuration list for PBXNativeTarget "chem-mvpTests" */;
+			buildPhases = (
+				22539B9F20EC37A000A9A063 /* Sources */,
+				22539BA020EC37A000A9A063 /* Frameworks */,
+				22539BA120EC37A000A9A063 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				22539BA520EC37A000A9A063 /* PBXTargetDependency */,
+			);
+			name = "chem-mvpTests";
+			productName = "chem-mvpTests";
+			productReference = 22539BA320EC37A000A9A063 /* chem-mvpTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		22539BAD20EC37A000A9A063 /* chem-mvpUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 22539BBD20EC37A000A9A063 /* Build configuration list for PBXNativeTarget "chem-mvpUITests" */;
+			buildPhases = (
+				22539BAA20EC37A000A9A063 /* Sources */,
+				22539BAB20EC37A000A9A063 /* Frameworks */,
+				22539BAC20EC37A000A9A063 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				22539BB020EC37A000A9A063 /* PBXTargetDependency */,
+			);
+			name = "chem-mvpUITests";
+			productName = "chem-mvpUITests";
+			productReference = 22539BAE20EC37A000A9A063 /* chem-mvpUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		22539B8720EC379B00A9A063 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0940;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = mc;
+				TargetAttributes = {
+					22539B8E20EC379B00A9A063 = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					22539BA220EC37A000A9A063 = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = 22539B8E20EC379B00A9A063;
+					};
+					22539BAD20EC37A000A9A063 = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = 22539B8E20EC379B00A9A063;
+					};
+				};
+			};
+			buildConfigurationList = 22539B8A20EC379B00A9A063 /* Build configuration list for PBXProject "chem-mvp" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 22539B8620EC379B00A9A063;
+			productRefGroup = 22539B9020EC379B00A9A063 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				22539B8E20EC379B00A9A063 /* chem-mvp */,
+				22539BA220EC37A000A9A063 /* chem-mvpTests */,
+				22539BAD20EC37A000A9A063 /* chem-mvpUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		22539B8D20EC379B00A9A063 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22539B9D20EC37A000A9A063 /* LaunchScreen.storyboard in Resources */,
+				22539B9A20EC37A000A9A063 /* Assets.xcassets in Resources */,
+				22539B9820EC379B00A9A063 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		22539BA120EC37A000A9A063 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		22539BAC20EC37A000A9A063 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		22539B8B20EC379B00A9A063 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22539B9520EC379B00A9A063 /* ViewController.swift in Sources */,
+				22539B9320EC379B00A9A063 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		22539B9F20EC37A000A9A063 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22539BA820EC37A000A9A063 /* chem_mvpTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		22539BAA20EC37A000A9A063 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22539BB320EC37A000A9A063 /* chem_mvpUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		22539BA520EC37A000A9A063 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 22539B8E20EC379B00A9A063 /* chem-mvp */;
+			targetProxy = 22539BA420EC37A000A9A063 /* PBXContainerItemProxy */;
+		};
+		22539BB020EC37A000A9A063 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 22539B8E20EC379B00A9A063 /* chem-mvp */;
+			targetProxy = 22539BAF20EC37A000A9A063 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		22539B9620EC379B00A9A063 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				22539B9720EC379B00A9A063 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		22539B9B20EC37A000A9A063 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				22539B9C20EC37A000A9A063 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		22539BB520EC37A000A9A063 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		22539BB620EC37A000A9A063 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		22539BB820EC37A000A9A063 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = W5M5K2W3PT;
+				INFOPLIST_FILE = "chem-mvp/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "mc.chem-mvp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		22539BB920EC37A000A9A063 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = W5M5K2W3PT;
+				INFOPLIST_FILE = "chem-mvp/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "mc.chem-mvp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		22539BBB20EC37A000A9A063 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = W5M5K2W3PT;
+				INFOPLIST_FILE = "chem-mvpTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "mc.chem-mvpTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/chem-mvp.app/chem-mvp";
+			};
+			name = Debug;
+		};
+		22539BBC20EC37A000A9A063 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = W5M5K2W3PT;
+				INFOPLIST_FILE = "chem-mvpTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "mc.chem-mvpTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/chem-mvp.app/chem-mvp";
+			};
+			name = Release;
+		};
+		22539BBE20EC37A000A9A063 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = W5M5K2W3PT;
+				INFOPLIST_FILE = "chem-mvpUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "mc.chem-mvpUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "chem-mvp";
+			};
+			name = Debug;
+		};
+		22539BBF20EC37A000A9A063 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = W5M5K2W3PT;
+				INFOPLIST_FILE = "chem-mvpUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "mc.chem-mvpUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "chem-mvp";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		22539B8A20EC379B00A9A063 /* Build configuration list for PBXProject "chem-mvp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				22539BB520EC37A000A9A063 /* Debug */,
+				22539BB620EC37A000A9A063 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		22539BB720EC37A000A9A063 /* Build configuration list for PBXNativeTarget "chem-mvp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				22539BB820EC37A000A9A063 /* Debug */,
+				22539BB920EC37A000A9A063 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		22539BBA20EC37A000A9A063 /* Build configuration list for PBXNativeTarget "chem-mvpTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				22539BBB20EC37A000A9A063 /* Debug */,
+				22539BBC20EC37A000A9A063 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		22539BBD20EC37A000A9A063 /* Build configuration list for PBXNativeTarget "chem-mvpUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				22539BBE20EC37A000A9A063 /* Debug */,
+				22539BBF20EC37A000A9A063 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 22539B8720EC379B00A9A063 /* Project object */;
+}
