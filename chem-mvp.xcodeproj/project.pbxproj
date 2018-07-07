@@ -14,6 +14,22 @@
 		22539B9D20EC37A000A9A063 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22539B9B20EC37A000A9A063 /* LaunchScreen.storyboard */; };
 		22539BA820EC37A000A9A063 /* chem_mvpTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22539BA720EC37A000A9A063 /* chem_mvpTests.swift */; };
 		22539BB320EC37A000A9A063 /* chem_mvpUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22539BB220EC37A000A9A063 /* chem_mvpUITests.swift */; };
+		22870CB420EC7445006091A8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 22870CB320EC7445006091A8 /* GoogleService-Info.plist */; };
+		22870CB520EC7445006091A8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 22870CB320EC7445006091A8 /* GoogleService-Info.plist */; };
+		22870CB620EC7445006091A8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 22870CB320EC7445006091A8 /* GoogleService-Info.plist */; };
+		229D54DC20EFD5910094A814 /* ReagentDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229D54DB20EFD5910094A814 /* ReagentDetailViewController.swift */; };
+		229D54DE20EFD74C0094A814 /* MolarityPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229D54DD20EFD74C0094A814 /* MolarityPickerView.swift */; };
+		229D54E020EFF5CE0094A814 /* Glassware.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229D54DF20EFF5CE0094A814 /* Glassware.swift */; };
+		229D54E220F01B700094A814 /* LabBenchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229D54E120F01B700094A814 /* LabBenchView.swift */; };
+		22A36FA520EB548F00F8B42E /* ReagentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A36FA420EB548F00F8B42E /* ReagentViewController.swift */; };
+		22A36FA720EB54A900F8B42E /* EquipmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A36FA620EB54A900F8B42E /* EquipmentViewController.swift */; };
+		22A36FA920EB54BE00F8B42E /* GlasswareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A36FA820EB54BE00F8B42E /* GlasswareViewController.swift */; };
+		22A36FAB20EB567100F8B42E /* Reagent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A36FAA20EB567100F8B42E /* Reagent.swift */; };
+		22A36FAD20EC552C00F8B42E /* MolecularUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A36FAC20EC552C00F8B42E /* MolecularUnit.swift */; };
+		22F1A49120EDDFA20094A456 /* Reaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F1A49020EDDFA20094A456 /* Reaction.swift */; };
+		3BFC49014A1C387ABF910CCA /* Pods_chem_mvp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39796BE0B608EFC9F613C6C2 /* Pods_chem_mvp.framework */; };
+		8A199291024D19612CF6B702 /* Pods_chem_mvpUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C29C58C503BA9FF21D9DBEF0 /* Pods_chem_mvpUITests.framework */; };
+		AEF8D651F8F393A66CBCABFB /* Pods_chem_mvpTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F0E7D9F25044AAA83FDF7D3 /* Pods_chem_mvpTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +50,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1EF49D8CE9F15BA5912832FA /* Pods-chem-mvp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-chem-mvp.release.xcconfig"; path = "Pods/Target Support Files/Pods-chem-mvp/Pods-chem-mvp.release.xcconfig"; sourceTree = "<group>"; };
 		22539B8F20EC379B00A9A063 /* chem-mvp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "chem-mvp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		22539B9220EC379B00A9A063 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		22539B9420EC379B00A9A063 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +64,25 @@
 		22539BAE20EC37A000A9A063 /* chem-mvpUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "chem-mvpUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		22539BB220EC37A000A9A063 /* chem_mvpUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chem_mvpUITests.swift; sourceTree = "<group>"; };
 		22539BB420EC37A000A9A063 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		22870CB320EC7445006091A8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		229D54DB20EFD5910094A814 /* ReagentDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReagentDetailViewController.swift; sourceTree = "<group>"; };
+		229D54DD20EFD74C0094A814 /* MolarityPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MolarityPickerView.swift; sourceTree = "<group>"; };
+		229D54DF20EFF5CE0094A814 /* Glassware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Glassware.swift; sourceTree = "<group>"; };
+		229D54E120F01B700094A814 /* LabBenchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabBenchView.swift; sourceTree = "<group>"; };
+		22A36FA420EB548F00F8B42E /* ReagentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReagentViewController.swift; sourceTree = "<group>"; };
+		22A36FA620EB54A900F8B42E /* EquipmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EquipmentViewController.swift; sourceTree = "<group>"; };
+		22A36FA820EB54BE00F8B42E /* GlasswareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlasswareViewController.swift; sourceTree = "<group>"; };
+		22A36FAA20EB567100F8B42E /* Reagent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reagent.swift; sourceTree = "<group>"; };
+		22A36FAC20EC552C00F8B42E /* MolecularUnit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MolecularUnit.swift; sourceTree = "<group>"; };
+		22DDA5AAAAEAB88F3F811E80 /* Pods-chem-mvpUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-chem-mvpUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-chem-mvpUITests/Pods-chem-mvpUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		22F1A49020EDDFA20094A456 /* Reaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reaction.swift; sourceTree = "<group>"; };
+		370FC8119508F20B6BB23E75 /* Pods-chem-mvpUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-chem-mvpUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-chem-mvpUITests/Pods-chem-mvpUITests.release.xcconfig"; sourceTree = "<group>"; };
+		39796BE0B608EFC9F613C6C2 /* Pods_chem_mvp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_chem_mvp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		645BC4CFBB2A9D721BC7B6BA /* Pods-chem-mvpTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-chem-mvpTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-chem-mvpTests/Pods-chem-mvpTests.release.xcconfig"; sourceTree = "<group>"; };
+		6F0E7D9F25044AAA83FDF7D3 /* Pods_chem_mvpTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_chem_mvpTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7639D3BB0740B764DCC1D5CF /* Pods-chem-mvp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-chem-mvp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-chem-mvp/Pods-chem-mvp.debug.xcconfig"; sourceTree = "<group>"; };
+		BFF224313269EBABB5EF4B0C /* Pods-chem-mvpTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-chem-mvpTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-chem-mvpTests/Pods-chem-mvpTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C29C58C503BA9FF21D9DBEF0 /* Pods_chem_mvpUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_chem_mvpUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3BFC49014A1C387ABF910CCA /* Pods_chem_mvp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +98,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEF8D651F8F393A66CBCABFB /* Pods_chem_mvpTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +106,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A199291024D19612CF6B702 /* Pods_chem_mvpUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +120,8 @@
 				22539BA620EC37A000A9A063 /* chem-mvpTests */,
 				22539BB120EC37A000A9A063 /* chem-mvpUITests */,
 				22539B9020EC379B00A9A063 /* Products */,
+				DE3B10E9917F26B0FA002912 /* Pods */,
+				9344EFF1D941EEFA4EE6FA55 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,10 +140,21 @@
 			children = (
 				22539B9220EC379B00A9A063 /* AppDelegate.swift */,
 				22539B9420EC379B00A9A063 /* ViewController.swift */,
+				229D54E120F01B700094A814 /* LabBenchView.swift */,
+				22A36FA420EB548F00F8B42E /* ReagentViewController.swift */,
+				229D54DB20EFD5910094A814 /* ReagentDetailViewController.swift */,
+				229D54DD20EFD74C0094A814 /* MolarityPickerView.swift */,
+				22A36FA620EB54A900F8B42E /* EquipmentViewController.swift */,
+				22A36FA820EB54BE00F8B42E /* GlasswareViewController.swift */,
+				229D54DF20EFF5CE0094A814 /* Glassware.swift */,
+				22F1A49020EDDFA20094A456 /* Reaction.swift */,
+				22A36FAA20EB567100F8B42E /* Reagent.swift */,
+				22A36FAC20EC552C00F8B42E /* MolecularUnit.swift */,
 				22539B9620EC379B00A9A063 /* Main.storyboard */,
 				22539B9920EC37A000A9A063 /* Assets.xcassets */,
 				22539B9B20EC37A000A9A063 /* LaunchScreen.storyboard */,
 				22539B9E20EC37A000A9A063 /* Info.plist */,
+				22870CB320EC7445006091A8 /* GoogleService-Info.plist */,
 			);
 			path = "chem-mvp";
 			sourceTree = "<group>";
@@ -125,6 +177,29 @@
 			path = "chem-mvpUITests";
 			sourceTree = "<group>";
 		};
+		9344EFF1D941EEFA4EE6FA55 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				39796BE0B608EFC9F613C6C2 /* Pods_chem_mvp.framework */,
+				6F0E7D9F25044AAA83FDF7D3 /* Pods_chem_mvpTests.framework */,
+				C29C58C503BA9FF21D9DBEF0 /* Pods_chem_mvpUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DE3B10E9917F26B0FA002912 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7639D3BB0740B764DCC1D5CF /* Pods-chem-mvp.debug.xcconfig */,
+				1EF49D8CE9F15BA5912832FA /* Pods-chem-mvp.release.xcconfig */,
+				BFF224313269EBABB5EF4B0C /* Pods-chem-mvpTests.debug.xcconfig */,
+				645BC4CFBB2A9D721BC7B6BA /* Pods-chem-mvpTests.release.xcconfig */,
+				22DDA5AAAAEAB88F3F811E80 /* Pods-chem-mvpUITests.debug.xcconfig */,
+				370FC8119508F20B6BB23E75 /* Pods-chem-mvpUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +207,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 22539BB720EC37A000A9A063 /* Build configuration list for PBXNativeTarget "chem-mvp" */;
 			buildPhases = (
+				7A5246C38B964F3CAFE1C861 /* [CP] Check Pods Manifest.lock */,
 				22539B8B20EC379B00A9A063 /* Sources */,
 				22539B8C20EC379B00A9A063 /* Frameworks */,
 				22539B8D20EC379B00A9A063 /* Resources */,
+				FECED0C56B6D986E2B8105AD /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -149,6 +226,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 22539BBA20EC37A000A9A063 /* Build configuration list for PBXNativeTarget "chem-mvpTests" */;
 			buildPhases = (
+				B2CD7F247CE15281B8B6513C /* [CP] Check Pods Manifest.lock */,
 				22539B9F20EC37A000A9A063 /* Sources */,
 				22539BA020EC37A000A9A063 /* Frameworks */,
 				22539BA120EC37A000A9A063 /* Resources */,
@@ -167,6 +245,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 22539BBD20EC37A000A9A063 /* Build configuration list for PBXNativeTarget "chem-mvpUITests" */;
 			buildPhases = (
+				0022B744B311BE0969322A24 /* [CP] Check Pods Manifest.lock */,
 				22539BAA20EC37A000A9A063 /* Sources */,
 				22539BAB20EC37A000A9A063 /* Frameworks */,
 				22539BAC20EC37A000A9A063 /* Resources */,
@@ -230,6 +309,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				22539B9D20EC37A000A9A063 /* LaunchScreen.storyboard in Resources */,
+				22870CB420EC7445006091A8 /* GoogleService-Info.plist in Resources */,
 				22539B9A20EC37A000A9A063 /* Assets.xcassets in Resources */,
 				22539B9820EC379B00A9A063 /* Main.storyboard in Resources */,
 			);
@@ -239,6 +319,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22870CB520EC7445006091A8 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -246,18 +327,108 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22870CB620EC7445006091A8 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0022B744B311BE0969322A24 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-chem-mvpUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7A5246C38B964F3CAFE1C861 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-chem-mvp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B2CD7F247CE15281B8B6513C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-chem-mvpTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FECED0C56B6D986E2B8105AD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-chem-mvp/Pods-chem-mvp-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-chem-mvp/Pods-chem-mvp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		22539B8B20EC379B00A9A063 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22A36FAB20EB567100F8B42E /* Reagent.swift in Sources */,
 				22539B9520EC379B00A9A063 /* ViewController.swift in Sources */,
+				22A36FA520EB548F00F8B42E /* ReagentViewController.swift in Sources */,
+				22A36FA920EB54BE00F8B42E /* GlasswareViewController.swift in Sources */,
 				22539B9320EC379B00A9A063 /* AppDelegate.swift in Sources */,
+				229D54DE20EFD74C0094A814 /* MolarityPickerView.swift in Sources */,
+				22A36FAD20EC552C00F8B42E /* MolecularUnit.swift in Sources */,
+				229D54DC20EFD5910094A814 /* ReagentDetailViewController.swift in Sources */,
+				22F1A49120EDDFA20094A456 /* Reaction.swift in Sources */,
+				229D54E020EFF5CE0094A814 /* Glassware.swift in Sources */,
+				22A36FA720EB54A900F8B42E /* EquipmentViewController.swift in Sources */,
+				229D54E220F01B700094A814 /* LabBenchView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -428,6 +599,7 @@
 		};
 		22539BB820EC37A000A9A063 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7639D3BB0740B764DCC1D5CF /* Pods-chem-mvp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -446,6 +618,7 @@
 		};
 		22539BB920EC37A000A9A063 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1EF49D8CE9F15BA5912832FA /* Pods-chem-mvp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -464,6 +637,7 @@
 		};
 		22539BBB20EC37A000A9A063 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BFF224313269EBABB5EF4B0C /* Pods-chem-mvpTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -485,6 +659,7 @@
 		};
 		22539BBC20EC37A000A9A063 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 645BC4CFBB2A9D721BC7B6BA /* Pods-chem-mvpTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -506,6 +681,7 @@
 		};
 		22539BBE20EC37A000A9A063 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 22DDA5AAAAEAB88F3F811E80 /* Pods-chem-mvpUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -526,6 +702,7 @@
 		};
 		22539BBF20EC37A000A9A063 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 370FC8119508F20B6BB23E75 /* Pods-chem-mvpUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
