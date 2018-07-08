@@ -17,22 +17,22 @@ class Reaction {
     
     var alkali : [String] = ["H", "Li", "Na", "K", "Rb", "Cs", "Fr"]
     
-    let barium = Reagent(components: [MolecularUnit(atoms: [.Ba], charge: 2, subscripts: [1], superscript: 1)])
-    let manganese = Reagent(components: [MolecularUnit(atoms: [.Mn], charge: 2, subscripts: [1], superscript: 1)])
-    let lead = Reagent(components: [MolecularUnit(atoms: [.Pb], charge: 1, subscripts: [1], superscript: 1)])
-    let silver = Reagent(components: [MolecularUnit(atoms: [.Ag], charge: 1, subscripts: [1], superscript: 1)])
-    let mercury = Reagent(components: [MolecularUnit(atoms: [.Hg], charge: 1, subscripts: [1], superscript: 1)])
+    let barium = MolecularUnit(atoms: [.Ba], charge: 2, subscripts: [1])
+    let manganese = MolecularUnit(atoms: [.Mn], charge: 2, subscripts: [1])
+    let lead = MolecularUnit(atoms: [.Pb], charge: 1, subscripts: [1])
+    let silver = MolecularUnit(atoms: [.Ag], charge: 1, subscripts: [1])
+    let mercury = MolecularUnit(atoms: [.Hg], charge: 1, subscripts: [1])
     
-    let chloride = Reagent(components: [MolecularUnit(atoms: [.Cl], charge: -1, subscripts: [1], superscript: 1)])
-    let bromide = Reagent(components: [MolecularUnit(atoms: [.Br], charge: -1, subscripts: [1], superscript: 1)])
-    let iodide = Reagent(components: [MolecularUnit(atoms: [.I], charge: -1, subscripts: [1], superscript: 1)])
-    let sulfate = Reagent(components: [MolecularUnit(atoms: [.S, .O], charge: -2, subscripts: [1,4], superscript: 1)])
-    let carbonate = Reagent(components: [MolecularUnit(atoms: [.C, .O], charge: -2, subscripts: [1,3], superscript: 1)])
-    let phosphate = Reagent(components: [MolecularUnit(atoms: [.P, .O], charge: -3, subscripts: [1,4], superscript: 1)])
-    let sulfite = Reagent(components: [MolecularUnit(atoms: [.S, .O], charge: -2, subscripts: [1,3], superscript: 1)])
-    let sulfide = Reagent(components: [MolecularUnit(atoms: [.S], charge: -2, subscripts: [1], superscript: 1)])
-    let borate = Reagent(components: [MolecularUnit(atoms: [.B, .O], charge: -3, subscripts: [1,3], superscript: 1)])
-    let arsenate = Reagent(components: [MolecularUnit(atoms: [.As, .O], charge: -3, subscripts: [1,4], superscript: 1)])
+    let chloride = MolecularUnit(atoms: [.Cl], charge: -1, subscripts: [1])
+    let bromide = MolecularUnit(atoms: [.Br], charge: -1, subscripts: [1])
+    let iodide = MolecularUnit(atoms: [.I], charge: -1, subscripts: [1])
+    let sulfate = MolecularUnit(atoms: [.S, .O], charge: -2, subscripts: [1,4])
+    let carbonate = MolecularUnit(atoms: [.C, .O], charge: -2, subscripts: [1,3])
+    let phosphate = MolecularUnit(atoms: [.P, .O], charge: -3, subscripts: [1,4])
+    let sulfite = MolecularUnit(atoms: [.S, .O], charge: -2, subscripts: [1,3])
+    let sulfide = MolecularUnit(atoms: [.S], charge: -2, subscripts: [1])
+    let borate = MolecularUnit(atoms: [.B, .O], charge: -3, subscripts: [1,3])
+    let arsenate = MolecularUnit(atoms: [.As, .O], charge: -3, subscripts: [1,4])
     
     var knownPrecAnions : [Reagent] = []
     
@@ -67,6 +67,9 @@ class Reaction {
         let nonAlkali = getNonAlkali()
         let precipitableAnions = getPreciptableAnions()
         
+        print("\(nonAlkali.count) non-alkali metals")
+        print("\(precipitableAnions.count) precipitable anions")
+        
         var nonSpectators : [Reagent] = []
         
         for metal in nonAlkali {
@@ -79,7 +82,17 @@ class Reaction {
             }
             else {
                 for anion in precipitableAnions {
-                    for metal in nonAlkali {
+                    if anion == sulfate && (metal == barium || metal == silver || (metal == lead)){
+                        products.append(Reagent(components: metal.components + anion.components))
+                        nonSpectators.append(metal)
+                        nonSpectators.append(anion)
+                    }
+                    else if (anion == chloride || anion == bromide || anion == iodide) && (metal == silver || metal == lead || metal == mercury){
+                        products.append(Reagent(components: metal.components + anion.components))
+                        nonSpectators.append(metal)
+                        nonSpectators.append(anion)
+                    }
+                    else if anion == carbonate || anion == phosphate || anion == borate || anion == arsenate {
                         products.append(Reagent(components: metal.components + anion.components))
                         nonSpectators.append(metal)
                         nonSpectators.append(anion)
@@ -90,6 +103,7 @@ class Reaction {
         
         for reactant in reactants {
             if !nonSpectators.contains(reactant) {
+                print("appending spectator")
                 products.append(reactant)
             }
         }
@@ -105,9 +119,9 @@ class Reaction {
 //            reactants.append(Reagent(components: manganese.components + carbonate.components))
 //        }
         
-        for reactant in reactants {
-            print(reactant.toString())
-        }
+//        for reactant in reactants {
+//            print(reactant.toString())
+//        }
         
     }
     
@@ -145,12 +159,30 @@ class Reaction {
 //        if reactants.contains(barium) { nonAlkali.append(barium) }
 
         for cation in cations {
-            if alkali.contains(cation.components[0].atoms[0].rawValue) {
+            if !alkali.contains(cation.components[0].atoms[0].rawValue) {
                 nonAlkali.append(cation)
             }
         }
         
         return nonAlkali
+    }
+    
+    func toString() -> NSAttributedString {
+        let equation : NSMutableAttributedString = NSMutableAttributedString(string: "")
+        for reactant in reactants {
+             equation.append(reactant.toString())
+            if reactant != reactants.last {
+                equation.append(NSAttributedString(string: "+"))
+            }
+        }
+        equation.append(NSAttributedString(string: "->"))
+        for product in products {
+            equation.append(product.toString())
+            if product != products.last {
+                equation.append(NSAttributedString(string: "+"))
+            }
+        }
+        return equation
     }
     
 }

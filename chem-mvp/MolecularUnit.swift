@@ -12,11 +12,12 @@ import UIKit
 class MolecularUnit : Equatable {
     static func == (lhs: MolecularUnit, rhs: MolecularUnit) -> Bool {
         if lhs.atoms == rhs.atoms {
-            return true
+            if lhs.subscripts == rhs.subscripts {
+                return true
+            }
         }
         return false
     }
-    
     
     enum Atom : String {
         case Ag = "Ag"
@@ -42,22 +43,22 @@ class MolecularUnit : Equatable {
     
     var charge : Int
     var subscripts : [Int] = []
-    var superscript : Int = 0
+//    var superscript : Int = 0
     var atoms : [Atom] = []
     var suFont : UIFont
     var formula : NSMutableAttributedString
     
-    init(atoms: [Atom], charge: Int, subscripts: [Int], superscript: Int) {
+    init(atoms: [Atom], charge: Int, subscripts: [Int]) {
         self.atoms = atoms
         self.charge = charge
         self.subscripts = subscripts
-        self.superscript = superscript
+//        self.superscript = superscript
         self.suFont = UIFont(descriptor: .preferredFontDescriptor(withTextStyle: .body), size: 10)
         self.formula = NSMutableAttributedString(string: "")
         print("unit initialized")
     }
     
-    init(atoms: String, charge: Int, subscripts: String, superscript: Int) {
+    init(atoms: String, charge: Int, subscripts: String) {
         let atomized = atoms.components(separatedBy: ",")
         let subscripted = subscripts.components(separatedBy: ",")
         
@@ -69,7 +70,7 @@ class MolecularUnit : Equatable {
             self.subscripts.append(Int(script)!)
         }
         self.charge = charge
-        self.superscript = superscript
+//        self.superscript = superscript
         self.suFont = UIFont(descriptor: .preferredFontDescriptor(withTextStyle: .body), size: 10)
         self.formula = NSMutableAttributedString(string: "")
         print("unit initialized")

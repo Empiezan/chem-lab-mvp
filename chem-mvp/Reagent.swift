@@ -9,16 +9,22 @@
 import Foundation
 import UIKit
 
-class Reagent : Equatable {
+class Reagent {
     
     var components : [MolecularUnit] = []
     var formula = NSMutableAttributedString(string: "")
     var molarity : Float = 0.1
     var volume : Float = 50
     var container : Glassware!
+    var subscripts: [Int]!
     
-    init(components: [MolecularUnit]) {
+    init(components: [MolecularUnit], subscripts: String) {
         self.components = components
+        var integered : [Int] = []
+        for subScript in subscripts.split(separator: ",") {
+            integered.append(Int(subScript)!)
+        }
+        self.subscripts = integered
     }
     
     func toString() -> NSMutableAttributedString {
@@ -29,14 +35,14 @@ class Reagent : Equatable {
         return formula
     }
     
-    static func == (lhs: Reagent, rhs: Reagent) -> Bool {
-        if lhs.components == rhs.components {
-            if lhs.formula == rhs.formula {
-                return true
-            }
-        }
-        return false
-    }
+//    static func == (lhs: Reagent, rhs: Reagent) -> Bool {
+//        if lhs.components == rhs.components {
+//            if lhs.formula == rhs.formula {
+//                return true
+//            }
+//        }
+//        return false
+//    }
     
 //    func addSubscript(munit: String, subscript: Int) -> NSMutableAttributedString {
 //        let subFont:UIFont = UIFont(descriptor: .preferredFontDescriptor(withTextStyle: .body), size: 10)
