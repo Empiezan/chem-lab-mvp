@@ -107,7 +107,7 @@ class Reaction {
 //        }
         
         for reactant in reactants {
-            print(reactant.toString())
+            print(reactant.toAttributedString())
         }
         
     }

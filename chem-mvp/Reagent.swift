@@ -12,11 +12,14 @@ import UIKit
 class Reagent : Equatable {
     
     var components : [MolecularUnit] = []
-    var formula = NSMutableAttributedString(string: "")
+    var attributedFormula = NSMutableAttributedString()
+    var formula = String()
     var molarity : Float = 0.1
     var volume : Float = 50
     var container : Glassware!
-    var subscripts : [Int]!
+    var subscripts : [Int]
+    var suFont : UIFont
+    var beakerView = UIImageView()
     
     init(components: [MolecularUnit], subscripts: String) {
         self.components = components
@@ -27,28 +30,76 @@ class Reagent : Equatable {
         }
         
         self.subscripts = scripted
+        self.suFont = UIFont(descriptor: .preferredFontDescriptor(withTextStyle: .body), size: 10)
+        self.beakerView = UIImageView(image: #imageLiteral(resourceName: "Beaker"))
     }
     
     init(components: [MolecularUnit], superscripts: [Int]) {
         self.components = components
         self.subscripts = superscripts
+        self.suFont = UIFont(descriptor: .preferredFontDescriptor(withTextStyle: .body), size: 10)
+        self.beakerView = UIImageView(image: #imageLiteral(resourceName: "Beaker"))
     }
     
-    func toString() -> NSMutableAttributedString {
-        formula = NSMutableAttributedString(string: "")
+    func toString() -> String {
+        formula = String()
         for i in 0...components.count-1 {
-            formula.append(components[i].toString())
+            if subscripts[i] > 1 {
+                var subscriptAdded : String
+                if components[i].atoms.count > 1 {
+                    subscriptAdded = "(\(components[i].toString()))\(subscripts[i])"
+                } else {
+                    subscriptAdded = "\(components[i].toString())\(subscripts[i])"
+                }
+                formula.append(subscriptAdded)
+            } else {
+                formula.append(components[i].toString())
+            }
         }
         return formula
     }
     
+    func toAttributedString() -> NSAttributedString {
+        attributedFormula = NSMutableAttributedString()
+        for i in 0...components.count-1 {
+            if subscripts[i] > 1 {
+                let subscriptLength = getSubscriptLength(integer: i)
+                let subscriptAdded = NSMutableAttributedString()
+                if components[i].atoms.count > 1 {
+                    subscriptAdded.append(NSAttributedString(string: "("))
+                    subscriptAdded.append(components[i].toAttributedString())
+                    subscriptAdded.append(NSAttributedString(string: ")"))
+                } else {
+                    subscriptAdded.append(components[i].toAttributedString())
+                }
+                subscriptAdded.append(NSAttributedString(string: "\(subscripts[i])"))
+                subscriptAdded.setAttributes([.font:suFont,.baselineOffset:0], range: NSRange(location: subscriptAdded.length - subscriptLength, length: subscriptLength))
+                attributedFormula.append(subscriptAdded)
+            } else {
+                attributedFormula.append(components[i].toAttributedString())
+            }
+            
+        }
+        return attributedFormula
+    }
+    
     static func == (lhs: Reagent, rhs: Reagent) -> Bool {
         if lhs.components == rhs.components {
-            if lhs.formula == rhs.formula {
+            if lhs.attributedFormula == rhs.attributedFormula {
                 return true
             }
         }
         return false
+    }
+    
+    func getSubscriptLength(integer: Int) -> Int {
+        //None of our subscripts or superscripts will exceed 99
+        if integer > 10 {
+            return 2
+        }
+        else {
+            return 1
+        }
     }
     
 //    func addSubscript(munit: String, subscript: Int) -> NSMutableAttributedString {

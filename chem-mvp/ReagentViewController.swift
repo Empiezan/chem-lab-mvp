@@ -9,7 +9,7 @@
 import UIKit
 import FirebaseDatabase
 
-class ReagentViewController: UIViewController, UITableViewDataSource {
+class ReagentViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     var reagents : [Reagent] = []
     
@@ -21,13 +21,20 @@ class ReagentViewController: UIViewController, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = reagentTable.dequeueReusableCell(withIdentifier: "reagent")
-        cell?.textLabel?.attributedText = reagents[indexPath.row].toString()
+        cell?.textLabel?.attributedText = reagents[indexPath.row].toAttributedString()
         return cell!
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let rDVC = self.parent?.parent?.childViewControllers[0] as? ReagentDetailViewController
-        rDVC?.reagent = reagents[indexPath.row]
+        let alert = UIAlertController(title: "Lab Bench Updated", message: "", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+        let reagentString = NSMutableAttributedString(attributedString: reagents[indexPath.row].toAttributedString())
+        let addedToLabBench = NSMutableAttributedString(string: " added to lab bench")
+        reagentString.append(addedToLabBench)
+        alert.setValue(reagentString, forKey: "attributedMessage")
+        self.present(alert, animated: true)
+        
+        //TODO: Add reagent to lab bench
     }
 
     override func viewDidLoad() {
@@ -50,6 +57,7 @@ class ReagentViewController: UIViewController, UITableViewDataSource {
                     print(propertyName as! String)
                     if propertyName as! String == "subscripts" {
                         subscripts = property as! String
+                        print(subscripts)
                     }
                     else {
                         //                    print(molecularUnit)
@@ -68,12 +76,7 @@ class ReagentViewController: UIViewController, UITableViewDataSource {
             }
             self.reagentTable.reloadData()
 //            let rxn : Reaction = Reaction(reactants: [Reagent(components: [MolecularUnit(atoms: "K", charge: 1, subscripts: "2", superscript: 1), MolecularUnit(atoms: "C,O", charge: -2, subscripts: "1,3", superscript: 1)]), Reagent(components: [MolecularUnit(atoms: "Mn", charge: 2, subscripts: "1", superscript: 1), MolecularUnit(atoms: "S,O", charge: -2, subscripts: "1,4", superscript: 1)])])
-//            rxn.getRxn()
-            if let reagentDetailViewController = self.parent?.parent?.childViewControllers[0] as? ReagentDetailViewController {
-                reagentDetailViewController.reagentLabel.attributedText = self.reagents[0].toString()
-            }
-            
-            
+//            rxn.getRxn()           
         })
     }
 

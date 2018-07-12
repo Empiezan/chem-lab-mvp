@@ -40,7 +40,7 @@ class GlasswareViewController: UIViewController, UITableViewDataSource {
             let data = snapshot.value as! NSDictionary
             let glassData = data["Glassware"] as! NSDictionary
             
-            for (name, volume) in glassData {
+            for (name, _) in glassData {
                 self.glassware.append(name as! String)
                 print(name as! String)
             }
