@@ -8,8 +8,21 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class LabBenchViewController: UIViewController {
 
+    var reagents : [Reagent] = []
+    var reagentsInSpawn : [Reagent] = []
+    
+    @IBOutlet var labBenchView: LabBenchView!
+    
+    override func viewWillAppear(_ animated: Bool) {
+        let benchWidth = labBenchView.frame.size.width
+        let benchHeight = labBenchView.frame.size.height
+        
+        
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.0

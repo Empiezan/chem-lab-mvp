@@ -10,13 +10,6 @@ import Foundation
 import UIKit
 
 class MolecularUnit : Equatable {
-    static func == (lhs: MolecularUnit, rhs: MolecularUnit) -> Bool {
-        if lhs.atoms == rhs.atoms {
-            return true
-        }
-        return false
-    }
-    
     
     enum Atom : String {
         case Ag = "Ag"
@@ -38,11 +31,13 @@ class MolecularUnit : Equatable {
         case P = "P"
         case As = "As"
         case B = "B"
+        case Rb = "Rb"
+        case Cs = "Cs"
+        case Fr = "Fr"
     }
     
     var charge : Int
     var subscripts : [Int] = []
-//    var superscript : Int = 0
     var atoms : [Atom] = []
     var suFont : UIFont
     var attributedFormula = NSMutableAttributedString()
@@ -52,7 +47,6 @@ class MolecularUnit : Equatable {
         self.atoms = atoms
         self.charge = charge
         self.subscripts = subscripts
-//        self.superscript = superscript
         self.suFont = UIFont(descriptor: .preferredFontDescriptor(withTextStyle: .body), size: 10)
         print("unit initialized")
     }
@@ -69,7 +63,6 @@ class MolecularUnit : Equatable {
             self.subscripts.append(Int(script)!)
         }
         self.charge = charge
-//        self.superscript = superscript
         self.suFont = UIFont(descriptor: .preferredFontDescriptor(withTextStyle: .body), size: 10)
         self.attributedFormula = NSMutableAttributedString(string: "")
         print("unit initialized")
@@ -94,19 +87,19 @@ class MolecularUnit : Equatable {
                 let subscriptLength : Int = getIntLength(integer: subscripts[i])
                 let atom = atoms[i].rawValue + String(subscripts[i])
                 attString = NSMutableAttributedString(string: atom)
-                attString.setAttributes([.font:suFont,.baselineOffset:0], range: NSRange(location: atom.count - subscriptLength, length: subscriptLength))
+                attString.setAttributes([.font:suFont,.baselineOffset:-2], range: NSRange(location: atom.count - subscriptLength, length: subscriptLength))
             }
             else {
                 attString = NSMutableAttributedString(string: atoms[i].rawValue)
             }
             attributedFormula.append(attString)
         }
-        //TODO: add superscripts
+        //TODO: add superscripts?
         return attributedFormula
     }
     
     func getIntLength(integer: Int) -> Int {
-        //None of our subscripts or superscripts will exceed 99
+        //None of our subscripts or superscripts will exceed double-digits
         if integer > 10 {
             return 2
         }
@@ -115,12 +108,10 @@ class MolecularUnit : Equatable {
         }
     }
     
-//    func toMolecularUnit(firebaseString: String) -> MolecularUnit {
-//        var molecularString : String
-//        molecularString = firebaseString.replacingOccurrences(of: "{", with: "")
-//        molecularString = molecularString.replacingOccurrences(of: "}", with: "")
-//        molecularString = molecularString.replacingOccurrences(of: "\t", with: "")
-//        let molecularArray = molecularString.split(separator: ";")
-//        return MolecularUnit(atoms: [], charge: 0, subscripts: [])
-//    }
+    static func == (lhs: MolecularUnit, rhs: MolecularUnit) -> Bool {
+        if lhs.atoms == rhs.atoms {
+            return true
+        }
+        return false
+    }
 }

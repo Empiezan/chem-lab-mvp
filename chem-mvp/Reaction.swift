@@ -14,11 +14,16 @@ class Reaction {
     var products : [Reagent] = []
     var pCoefficients : [Int] = []
     
-    var alkali : [String] = ["H", "Li", "Na", "K", "Rb", "Cs", "Fr"]
+    var alkali : [MolecularUnit]
     
+    //TODO: store the following molecular units into phone storage instead of RAM
     let hydrogen = MolecularUnit(atoms: [.H], charge: 1, subscripts: [1])
     let lithium = MolecularUnit(atoms: [.Li], charge: 1, subscripts: [1])
-    
+    let sodium = MolecularUnit(atoms: [.Na], charge: 1, subscripts: [1])
+    let potassium = MolecularUnit(atoms: [.K], charge: 1, subscripts: [1])
+    let rubidium = MolecularUnit(atoms: [.Rb], charge: 1, subscripts: [1])
+    let cesium = MolecularUnit(atoms: [.Cs], charge: 1, subscripts: [1])
+    let francium = MolecularUnit(atoms: [.Fr], charge: 1, subscripts: [1])
     
     let barium = MolecularUnit(atoms: [.Ba], charge: 2, subscripts: [1])
     let manganese = MolecularUnit(atoms: [.Mn], charge: 2, subscripts: [1])
@@ -48,6 +53,7 @@ class Reaction {
                 self.reactants.append(molecularUnit)
             }
         }
+        self.alkali = [hydrogen, lithium, sodium, potassium, rubidium, cesium, francium]
         self.knownPrecAnions = [chloride, bromide, iodide, sulfate, carbonate, phosphate, sulfite, sulfide, borate, arsenate]
     }
     
@@ -95,16 +101,7 @@ class Reaction {
             }
         }
         
-        //Matrix Algebra...
-        
- 
-//        if anions.contains(carbonate) && cations.contains(manganese) {
-//            let ci = reactants.index(of: carbonate)
-//            reactants.remove(at: ci!)
-//            let mi = reactants.index(of: manganese)
-//            reactants.remove(at: mi!)
-//            reactants.append(Reagent(components: manganese.components + carbonate.components))
-//        }
+        //Matrix algebra to balance equations...
         
         for reactant in reactants {
             print(reactant.toAttributedString())
@@ -114,17 +111,6 @@ class Reaction {
     
     func getPreciptableAnions() -> [MolecularUnit] {
         var precip : [MolecularUnit] = []
-        
-//        if reactants.contains(chloride) { precip.append(chloride) }
-//        if reactants.contains(bromide) { precip.append(bromide) }
-//        if reactants.contains(iodide) { precip.append(iodide) }
-//        if reactants.contains(sulfate) { precip.append(sulfate) }
-//        if reactants.contains(carbonate) { precip.append(carbonate) }
-//        if reactants.contains(phosphate) { precip.append(phosphate) }
-//        if reactants.contains(sulfite) { precip.append(sulfite) }
-//        if reactants.contains(sulfide) { precip.append(sulfide) }
-//        if reactants.contains(borate) { precip.append(borate) }
-//        if reactants.contains(arsenate) { precip.append(arsenate) }
 
         for anion in knownPrecAnions {
             if reactants.contains(anion) {
@@ -138,15 +124,9 @@ class Reaction {
     func getNonAlkali() -> [MolecularUnit] {
         //TODO: implement more efficient version with hashset
         var nonAlkali : [MolecularUnit] = []
-        
-//        if reactants.contains(manganese) { nonAlkali.append(manganese) }
-//        if reactants.contains(lead) { nonAlkali.append(lead) }
-//        if reactants.contains(silver) { nonAlkali.append(silver) }
-//        if reactants.contains(mercury) { nonAlkali.append(mercury) }
-//        if reactants.contains(barium) { nonAlkali.append(barium) }
 
         for cation in cations {
-            if alkali.contains(cation.atoms[0].rawValue) {
+            if alkali.contains(cation) {
                 nonAlkali.append(cation)
             }
         }

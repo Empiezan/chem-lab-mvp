@@ -41,12 +41,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U8P-Zj-2Fk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1172" y="-1276"/>
+            <point key="canvasLocation" x="417" y="-694"/>
         </scene>
         <!--Lab Bench-->
         <scene sceneID="vHg-2F-beQ">
             <objects>
-                <viewController id="Whh-tf-iE6" sceneMemberID="viewController">
+                <viewController id="Whh-tf-iE6" customClass="LabBenchViewController" customModule="chem_mvp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PBd-Mf-B5C" customClass="LabBenchView" customModule="chem_mvp" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -54,6 +54,9 @@
                         <viewLayoutGuide key="safeArea" id="b6h-ty-Pti"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Lab Bench" id="qFD-ki-2uc"/>
+                    <connections>
+                        <outlet property="labBenchView" destination="PBd-Mf-B5C" id="ytF-GR-bxv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3pg-VZ-MNL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -116,9 +119,9 @@
                     </tabBar>
                     <connections>
                         <segue destination="Whh-tf-iE6" kind="relationship" relationship="viewControllers" id="oHh-M2-cSZ"/>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="cs0-qD-KdP"/>
                         <segue destination="dgH-vW-hTX" kind="relationship" relationship="viewControllers" id="x3u-EO-sul"/>
-                        <segue destination="hjQ-kV-qc5" kind="relationship" relationship="viewControllers" id="WoN-hA-vNU"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="sgu-Cv-hd1"/>
+                        <segue destination="hjQ-kV-qc5" kind="relationship" relationship="viewControllers" id="JiR-3N-5gm"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5WL-PA-ntW" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -159,7 +162,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="417" y="-678"/>
+            <point key="canvasLocation" x="1042" y="-1276"/>
         </scene>
     </scenes>
 </document>

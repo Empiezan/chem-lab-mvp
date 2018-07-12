@@ -73,7 +73,7 @@ class Reagent : Equatable {
                     subscriptAdded.append(components[i].toAttributedString())
                 }
                 subscriptAdded.append(NSAttributedString(string: "\(subscripts[i])"))
-                subscriptAdded.setAttributes([.font:suFont,.baselineOffset:0], range: NSRange(location: subscriptAdded.length - subscriptLength, length: subscriptLength))
+                subscriptAdded.setAttributes([.font:suFont,.baselineOffset:-2], range: NSRange(location: subscriptAdded.length - subscriptLength, length: subscriptLength))
                 attributedFormula.append(subscriptAdded)
             } else {
                 attributedFormula.append(components[i].toAttributedString())
@@ -93,7 +93,7 @@ class Reagent : Equatable {
     }
     
     func getSubscriptLength(integer: Int) -> Int {
-        //None of our subscripts or superscripts will exceed 99
+        //None of our subscripts or superscripts will likely exceed double-digits
         if integer > 10 {
             return 2
         }
