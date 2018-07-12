@@ -14,6 +14,9 @@
 		22539B9D20EC37A000A9A063 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22539B9B20EC37A000A9A063 /* LaunchScreen.storyboard */; };
 		22539BA820EC37A000A9A063 /* chem_mvpTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22539BA720EC37A000A9A063 /* chem_mvpTests.swift */; };
 		22539BB320EC37A000A9A063 /* chem_mvpUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22539BB220EC37A000A9A063 /* chem_mvpUITests.swift */; };
+		22870CB420EC7445006091A8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 22870CB320EC7445006091A8 /* GoogleService-Info.plist */; };
+		22870CB520EC7445006091A8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 22870CB320EC7445006091A8 /* GoogleService-Info.plist */; };
+		22870CB620EC7445006091A8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 22870CB320EC7445006091A8 /* GoogleService-Info.plist */; };
 		229D54DC20EFD5910094A814 /* ReagentDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229D54DB20EFD5910094A814 /* ReagentDetailViewController.swift */; };
 		229D54DE20EFD74C0094A814 /* MolarityPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229D54DD20EFD74C0094A814 /* MolarityPickerView.swift */; };
 		229D54E020EFF5CE0094A814 /* Glassware.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229D54DF20EFF5CE0094A814 /* Glassware.swift */; };
@@ -25,7 +28,6 @@
 		22A36FAD20EC552C00F8B42E /* MolecularUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A36FAC20EC552C00F8B42E /* MolecularUnit.swift */; };
 		22F1A49120EDDFA20094A456 /* Reaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F1A49020EDDFA20094A456 /* Reaction.swift */; };
 		3BFC49014A1C387ABF910CCA /* Pods_chem_mvp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39796BE0B608EFC9F613C6C2 /* Pods_chem_mvp.framework */; };
-		685E1AF420F19DBB00B4D3A1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 685E1AF320F19DBB00B4D3A1 /* GoogleService-Info.plist */; };
 		8A199291024D19612CF6B702 /* Pods_chem_mvpUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C29C58C503BA9FF21D9DBEF0 /* Pods_chem_mvpUITests.framework */; };
 		AEF8D651F8F393A66CBCABFB /* Pods_chem_mvpTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F0E7D9F25044AAA83FDF7D3 /* Pods_chem_mvpTests.framework */; };
 /* End PBXBuildFile section */
@@ -62,6 +64,7 @@
 		22539BAE20EC37A000A9A063 /* chem-mvpUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "chem-mvpUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		22539BB220EC37A000A9A063 /* chem_mvpUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chem_mvpUITests.swift; sourceTree = "<group>"; };
 		22539BB420EC37A000A9A063 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		22870CB320EC7445006091A8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		229D54DB20EFD5910094A814 /* ReagentDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReagentDetailViewController.swift; sourceTree = "<group>"; };
 		229D54DD20EFD74C0094A814 /* MolarityPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MolarityPickerView.swift; sourceTree = "<group>"; };
 		229D54DF20EFF5CE0094A814 /* Glassware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Glassware.swift; sourceTree = "<group>"; };
@@ -76,7 +79,6 @@
 		370FC8119508F20B6BB23E75 /* Pods-chem-mvpUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-chem-mvpUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-chem-mvpUITests/Pods-chem-mvpUITests.release.xcconfig"; sourceTree = "<group>"; };
 		39796BE0B608EFC9F613C6C2 /* Pods_chem_mvp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_chem_mvp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		645BC4CFBB2A9D721BC7B6BA /* Pods-chem-mvpTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-chem-mvpTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-chem-mvpTests/Pods-chem-mvpTests.release.xcconfig"; sourceTree = "<group>"; };
-		685E1AF320F19DBB00B4D3A1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6F0E7D9F25044AAA83FDF7D3 /* Pods_chem_mvpTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_chem_mvpTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7639D3BB0740B764DCC1D5CF /* Pods-chem-mvp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-chem-mvp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-chem-mvp/Pods-chem-mvp.debug.xcconfig"; sourceTree = "<group>"; };
 		BFF224313269EBABB5EF4B0C /* Pods-chem-mvpTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-chem-mvpTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-chem-mvpTests/Pods-chem-mvpTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -152,7 +154,7 @@
 				22539B9920EC37A000A9A063 /* Assets.xcassets */,
 				22539B9B20EC37A000A9A063 /* LaunchScreen.storyboard */,
 				22539B9E20EC37A000A9A063 /* Info.plist */,
-				685E1AF320F19DBB00B4D3A1 /* GoogleService-Info.plist */,
+				22870CB320EC7445006091A8 /* GoogleService-Info.plist */,
 			);
 			path = "chem-mvp";
 			sourceTree = "<group>";
@@ -307,7 +309,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				22539B9D20EC37A000A9A063 /* LaunchScreen.storyboard in Resources */,
-				685E1AF420F19DBB00B4D3A1 /* GoogleService-Info.plist in Resources */,
+				22870CB420EC7445006091A8 /* GoogleService-Info.plist in Resources */,
 				22539B9A20EC37A000A9A063 /* Assets.xcassets in Resources */,
 				22539B9820EC379B00A9A063 /* Main.storyboard in Resources */,
 			);
@@ -317,6 +319,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22870CB520EC7445006091A8 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,6 +327,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22870CB620EC7445006091A8 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

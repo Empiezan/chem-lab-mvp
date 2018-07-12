@@ -46,64 +46,20 @@
         <!--Lab Bench-->
         <scene sceneID="vHg-2F-beQ">
             <objects>
-                <viewController id="Whh-tf-iE6" customClass="ViewController" customModule="chem_mvp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Whh-tf-iE6" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PBd-Mf-B5C" customClass="LabBenchView" customModule="chem_mvp" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Reagent 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uow-wv-0Qc">
-                                <rect key="frame" x="192" y="36" width="76" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Reagent 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lfs-VE-Q6Q">
-                                <rect key="frame" x="446" y="36" width="78" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Equation" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M6e-JF-uWl">
-                                <rect key="frame" x="0.0" y="108" width="667" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NM4-4L-uH4">
-                                <rect key="frame" x="327" y="188" width="36" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Clear"/>
-                                <connections>
-                                    <action selector="clearEquation:" destination="Whh-tf-iE6" eventType="touchUpInside" id="pAu-7U-s9Y"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qfX-PY-JHk">
-                                <rect key="frame" x="313" y="150" width="64" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Calculate"/>
-                                <connections>
-                                    <action selector="calculateRxn:" destination="Whh-tf-iE6" eventType="touchUpInside" id="ZbT-QP-MHI"/>
-                                </connections>
-                            </button>
-                        </subviews>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="b6h-ty-Pti"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Lab Bench" id="qFD-ki-2uc"/>
-                    <connections>
-                        <outlet property="equation" destination="M6e-JF-uWl" id="s0O-be-VWi"/>
-                        <outlet property="reactant1" destination="Uow-wv-0Qc" id="yyA-ZE-AX1"/>
-                        <outlet property="reactant2" destination="Lfs-VE-Q6Q" id="WWP-FA-rMw"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3pg-VZ-MNL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="283.80809595202402" y="-2423.1999999999998"/>
+            <point key="canvasLocation" x="284" y="-2422"/>
         </scene>
-        <!--Reagents-->
+        <!--Reagent-->
         <scene sceneID="xaf-u8-gVk">
             <objects>
                 <viewController id="dgH-vW-hTX" customClass="ReagentViewController" customModule="chem_mvp" customModuleProvider="target" sceneMemberID="viewController">
@@ -124,10 +80,6 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
-                                <connections>
-                                    <outlet property="dataSource" destination="dgH-vW-hTX" id="Jhu-ux-prM"/>
-                                    <outlet property="delegate" destination="dgH-vW-hTX" id="Aw1-pM-k00"/>
-                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -140,14 +92,14 @@
                         <viewLayoutGuide key="safeArea" id="ebu-lc-K0K"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Reagent" id="Vek-Y5-MP8"/>
-                    <navigationItem key="navigationItem" title="Reagents" id="oe0-sZ-6vI"/>
+                    <navigationItem key="navigationItem" id="oe0-sZ-6vI"/>
                     <connections>
                         <outlet property="reagentTable" destination="PPu-aF-Zzg" id="bty-U4-vbm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AbI-mC-h53" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2072" y="-1983"/>
+            <point key="canvasLocation" x="3161.4692653673164" y="-87.200000000000003"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="cZw-tA-dYC">
@@ -159,10 +111,10 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
+                        <segue destination="hjQ-kV-qc5" kind="relationship" relationship="viewControllers" id="nyn-Wt-3k3"/>
                         <segue destination="Whh-tf-iE6" kind="relationship" relationship="viewControllers" id="oHh-M2-cSZ"/>
-                        <segue destination="xEl-MZ-Ktb" kind="relationship" relationship="viewControllers" id="jnx-73-IXk"/>
-                        <segue destination="hjQ-kV-qc5" kind="relationship" relationship="viewControllers" id="YY9-VG-P5h"/>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="VFE-Mr-1mr"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="cs0-qD-KdP"/>
+                        <segue destination="xEl-MZ-Ktb" kind="relationship" relationship="viewControllers" id="c2g-a3-MlG"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5WL-PA-ntW" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -213,17 +165,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="s0V-cC-nSG">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="s0V-cC-nSG">
                                 <rect key="frame" x="0.0" y="32" width="667" height="311"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reagent" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CvE-c9-OTR">
-                                        <rect key="frame" x="286.5" y="0.0" width="94" height="36.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CvE-c9-OTR">
+                                        <rect key="frame" x="308.5" y="0.0" width="50" height="50"/>
+                                        <color key="backgroundColor" white="0.85652901785714286" alpha="0.59784881161971826" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="a8A-Zg-O9O">
-                                        <rect key="frame" x="0.0" y="57.5" width="667" height="253.5"/>
+                                        <rect key="frame" x="0.0" y="50" width="667" height="261"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="hjx-FL-HM0">
                                                 <rect key="frame" x="0.0" y="0.0" width="667" height="186"/>
@@ -285,10 +238,10 @@
                                                 </subviews>
                                             </stackView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K7I-6B-glR">
-                                                <rect key="frame" x="285.5" y="186" width="96" height="67.5"/>
+                                                <rect key="frame" x="285.5" y="186" width="96" height="75"/>
                                                 <state key="normal" title="Add To Bench"/>
                                                 <connections>
-                                                    <action selector="addReagentToBench:" destination="IjG-sX-bFG" eventType="touchUpInside" id="XoX-Qv-1q0"/>
+                                                    <action selector="addReagentToBnech:" destination="IjG-sX-bFG" eventType="touchUpInside" id="XoX-Qv-1q0"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -298,12 +251,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="s0V-cC-nSG" firstAttribute="centerY" secondItem="vF6-G0-s8V" secondAttribute="centerY" id="3To-UH-t7Q"/>
                             <constraint firstItem="vF6-G0-s8V" firstAttribute="bottom" secondItem="s0V-cC-nSG" secondAttribute="bottom" id="Ajg-YJ-QQl"/>
                             <constraint firstAttribute="trailing" secondItem="s0V-cC-nSG" secondAttribute="trailing" id="NUj-Kl-4bv"/>
-                            <constraint firstItem="CvE-c9-OTR" firstAttribute="centerX" secondItem="vF6-G0-s8V" secondAttribute="centerX" id="aAE-xQ-N2N"/>
                             <constraint firstItem="s0V-cC-nSG" firstAttribute="leading" secondItem="FSp-18-T2D" secondAttribute="leading" id="nro-rL-ZpU"/>
-                            <constraint firstItem="s0V-cC-nSG" firstAttribute="top" secondItem="vF6-G0-s8V" secondAttribute="top" priority="750" id="ohg-tC-PVQ"/>
+                            <constraint firstItem="s0V-cC-nSG" firstAttribute="top" secondItem="vF6-G0-s8V" secondAttribute="top" id="ohg-tC-PVQ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="vF6-G0-s8V"/>
                     </view>
@@ -316,7 +267,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Aqs-Og-INp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1108" y="-1137"/>
+            <point key="canvasLocation" x="2467.9160419790105" y="629.60000000000002"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="SGh-MB-74O">
@@ -332,7 +283,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jVI-c1-Arb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1108" y="-1982"/>
+            <point key="canvasLocation" x="2468" y="-86"/>
         </scene>
         <!--Reagents-->
         <scene sceneID="3Hs-Gg-j6l">
@@ -346,7 +297,7 @@
                 </splitViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ggs-On-A9f" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="284" y="-1471"/>
+            <point key="canvasLocation" x="1669" y="273"/>
         </scene>
     </scenes>
 </document>

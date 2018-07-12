@@ -9,10 +9,9 @@
 import UIKit
 import FirebaseDatabase
 
-class ReagentViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class ReagentViewController: UIViewController, UITableViewDataSource {
     
     var reagents : [Reagent] = []
-    var reagentDetailVC : ReagentDetailViewController!
     
     @IBOutlet weak var reagentTable: UITableView!
     
@@ -27,8 +26,8 @@ class ReagentViewController: UIViewController, UITableViewDataSource, UITableVie
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        reagentDetailVC?.reagent = reagents[indexPath.row]
-//        rDVC?.reagentLabel.attributedText = reagents[indexPath.row].toString()
+        let rDVC = self.parent?.parent?.childViewControllers[0] as? ReagentDetailViewController
+        rDVC?.reagent = reagents[indexPath.row]
     }
 
     override func viewDidLoad() {
@@ -43,39 +42,30 @@ class ReagentViewController: UIViewController, UITableViewDataSource, UITableVie
             let data = snapshot.value as! NSDictionary
             let reagentsData = data["Reagents"] as! NSDictionary
             
-            for (_, reagent) in reagentsData {
+            for (_, formula) in reagentsData {
                 var components : [MolecularUnit] = []
-                var subscripts : String!
-                for (reagentPropertyName, reagentProperty) in (reagent as! NSDictionary) {
-                    if reagentPropertyName as? String != "subscripts" {
-                        let molecularDict = reagentProperty as! NSDictionary
-                        let atoms = molecularDict["atoms"] as? String
-                        print(atoms!)
-                        let charge = molecularDict["charge"] as? Int
-                        print(charge!)
-                        let subscripts = molecularDict["subscripts"] as? String
-                        print(subscripts!)
-                        components.append(MolecularUnit(atoms: atoms!, charge: charge!, subscripts: subscripts!))
-                    }
-                    else {
-                        subscripts = reagentProperty as? String
-                    }
+                for (_, molecularUnit) in (formula as! NSDictionary) {
+                    let molecularDict = molecularUnit as! NSDictionary
+                    let atoms = molecularDict["atoms"] as? String
+                    print(atoms!)
+                    let charge = molecularDict["charge"] as? Int
+                    print(charge!)
+                    let subscripts = molecularDict["subscripts"] as? String
+                    print(subscripts!)
+                    let superscript = molecularDict["superscript"] as? Int
+                    print(superscript!)
+                    components.append(MolecularUnit(atoms: atoms!, charge: charge!, subscripts: subscripts!, superscript: superscript!))
                 }
                 print(components)
-                self.reagents.append(Reagent(components: components, subscripts: subscripts))
+                self.reagents.append(Reagent(components: components))
             }
             self.reagentTable.reloadData()
-//            let rxn : Reaction = Reaction(reactants: [Reagent(components: [MolecularUnit(atoms: "K", charge: 1, subscripts: "2", superscript: 1), MolecularUnit(atoms: "C,O", charge: -2, subscripts: "1,3", superscript: 1)]), Reagent(components: [MolecularUnit(atoms: "Mn", charge: 2, subscripts: "1", superscript: 1), MolecularUnit(atoms: "S,O", charge: -2, subscripts: "1,4", superscript: 1)])])
-//            rxn.getRxn()
-            self.reagentDetailVC = self.parent?.parent?.childViewControllers[1] as? ReagentDetailViewController
-//            {
-//                reagentDetailViewController.reagentLabel.attributedText = self.reagents[0].toString()
-            self.reagentDetailVC.reagent = self.reagents[0]
-//            }
-//            else {
-//                print("failed")
-//            }
-            self.reagentTable.selectRow(at: IndexPath(row: 0, section: 0), animated: false, scrollPosition: .top)
+            let rxn : Reaction = Reaction(reactants: [Reagent(components: [MolecularUnit(atoms: "K", charge: 1, subscripts: "2", superscript: 1), MolecularUnit(atoms: "C,O", charge: -2, subscripts: "1,3", superscript: 1)]), Reagent(components: [MolecularUnit(atoms: "Mn", charge: 2, subscripts: "1", superscript: 1), MolecularUnit(atoms: "S,O", charge: -2, subscripts: "1,4", superscript: 1)])])
+            rxn.getRxn()
+            if let reagentDetailViewController = self.parent?.parent?.childViewControllers[0] as? ReagentDetailViewController {
+                reagentDetailViewController.reagentLabel.attributedText = self.reagents[0].toString()
+            }
+            
             
         })
     }
