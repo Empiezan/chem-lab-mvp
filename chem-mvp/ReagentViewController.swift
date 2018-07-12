@@ -44,24 +44,31 @@ class ReagentViewController: UIViewController, UITableViewDataSource {
             
             for (_, formula) in reagentsData {
                 var components : [MolecularUnit] = []
-                for (_, molecularUnit) in (formula as! NSDictionary) {
-                    let molecularDict = molecularUnit as! NSDictionary
-                    let atoms = molecularDict["atoms"] as? String
-                    print(atoms!)
-                    let charge = molecularDict["charge"] as? Int
-                    print(charge!)
-                    let subscripts = molecularDict["subscripts"] as? String
-                    print(subscripts!)
-                    let superscript = molecularDict["superscript"] as? Int
-                    print(superscript!)
-                    components.append(MolecularUnit(atoms: atoms!, charge: charge!, subscripts: subscripts!, superscript: superscript!))
-                }
-                print(components)
-                self.reagents.append(Reagent(components: components))
+                var subscripts : String!
+//                print(formula)
+                for (propertyName, property) in (formula as! NSDictionary) {
+                    print(propertyName as! String)
+                    if propertyName as! String == "subscripts" {
+                        subscripts = property as! String
+                    }
+                    else {
+                        //                    print(molecularUnit)
+                        let molecularDict = property as! NSDictionary
+                        let atoms = molecularDict["atoms"] as! String
+                        print(atoms)
+                        let charge = molecularDict["charge"] as! Int
+                        print(charge)
+                        let subscripts = molecularDict["subscripts"] as! String
+                        print(subscripts)
+                        components.append(MolecularUnit(atoms: atoms, charge: charge, subscripts: subscripts))
+                    }
+                    //                print(components)
+                    }
+                self.reagents.append(Reagent(components: components, subscripts: subscripts))
             }
             self.reagentTable.reloadData()
-            let rxn : Reaction = Reaction(reactants: [Reagent(components: [MolecularUnit(atoms: "K", charge: 1, subscripts: "2", superscript: 1), MolecularUnit(atoms: "C,O", charge: -2, subscripts: "1,3", superscript: 1)]), Reagent(components: [MolecularUnit(atoms: "Mn", charge: 2, subscripts: "1", superscript: 1), MolecularUnit(atoms: "S,O", charge: -2, subscripts: "1,4", superscript: 1)])])
-            rxn.getRxn()
+//            let rxn : Reaction = Reaction(reactants: [Reagent(components: [MolecularUnit(atoms: "K", charge: 1, subscripts: "2", superscript: 1), MolecularUnit(atoms: "C,O", charge: -2, subscripts: "1,3", superscript: 1)]), Reagent(components: [MolecularUnit(atoms: "Mn", charge: 2, subscripts: "1", superscript: 1), MolecularUnit(atoms: "S,O", charge: -2, subscripts: "1,4", superscript: 1)])])
+//            rxn.getRxn()
             if let reagentDetailViewController = self.parent?.parent?.childViewControllers[0] as? ReagentDetailViewController {
                 reagentDetailViewController.reagentLabel.attributedText = self.reagents[0].toString()
             }

@@ -9,54 +9,55 @@
 import Foundation
 
 class Reaction {
-    var reactants : [Reagent] = []
+    var reactants : [MolecularUnit] = []
     var rCoefficients : [Int] = []
     var products : [Reagent] = []
     var pCoefficients : [Int] = []
     
-    
     var alkali : [String] = ["H", "Li", "Na", "K", "Rb", "Cs", "Fr"]
     
-    let barium = Reagent(components: [MolecularUnit(atoms: [.Ba], charge: 2, subscripts: [1], superscript: 1)])
-    let manganese = Reagent(components: [MolecularUnit(atoms: [.Mn], charge: 2, subscripts: [1], superscript: 1)])
-    let lead = Reagent(components: [MolecularUnit(atoms: [.Pb], charge: 1, subscripts: [1], superscript: 1)])
-    let silver = Reagent(components: [MolecularUnit(atoms: [.Ag], charge: 1, subscripts: [1], superscript: 1)])
-    let mercury = Reagent(components: [MolecularUnit(atoms: [.Hg], charge: 1, subscripts: [1], superscript: 1)])
+    let hydrogen = MolecularUnit(atoms: [.H], charge: 1, subscripts: [1])
+    let lithium = MolecularUnit(atoms: [.Li], charge: 1, subscripts: [1])
     
-    let chloride = Reagent(components: [MolecularUnit(atoms: [.Cl], charge: -1, subscripts: [1], superscript: 1)])
-    let bromide = Reagent(components: [MolecularUnit(atoms: [.Br], charge: -1, subscripts: [1], superscript: 1)])
-    let iodide = Reagent(components: [MolecularUnit(atoms: [.I], charge: -1, subscripts: [1], superscript: 1)])
-    let sulfate = Reagent(components: [MolecularUnit(atoms: [.S, .O], charge: -2, subscripts: [1,4], superscript: 1)])
-    let carbonate = Reagent(components: [MolecularUnit(atoms: [.C, .O], charge: -2, subscripts: [1,3], superscript: 1)])
-    let phosphate = Reagent(components: [MolecularUnit(atoms: [.P, .O], charge: -3, subscripts: [1,4], superscript: 1)])
-    let sulfite = Reagent(components: [MolecularUnit(atoms: [.S, .O], charge: -2, subscripts: [1,3], superscript: 1)])
-    let sulfide = Reagent(components: [MolecularUnit(atoms: [.S], charge: -2, subscripts: [1], superscript: 1)])
-    let borate = Reagent(components: [MolecularUnit(atoms: [.B, .O], charge: -3, subscripts: [1,3], superscript: 1)])
-    let arsenate = Reagent(components: [MolecularUnit(atoms: [.As, .O], charge: -3, subscripts: [1,4], superscript: 1)])
     
-    var knownPrecAnions : [Reagent] = []
+    let barium = MolecularUnit(atoms: [.Ba], charge: 2, subscripts: [1])
+    let manganese = MolecularUnit(atoms: [.Mn], charge: 2, subscripts: [1])
+    let lead = MolecularUnit(atoms: [.Pb], charge: 1, subscripts: [1])
+    let silver = MolecularUnit(atoms: [.Ag], charge: 1, subscripts: [1])
+    let mercury = MolecularUnit(atoms: [.Hg], charge: 1, subscripts: [1])
     
-    var cations : [Reagent] = []
-    var anions : [Reagent] = []
+    let chloride = MolecularUnit(atoms: [.Cl], charge: -1, subscripts: [1])
+    let bromide = MolecularUnit(atoms: [.Br], charge: -1, subscripts: [1])
+    let iodide = MolecularUnit(atoms: [.I], charge: -1, subscripts: [1])
+    let sulfate = MolecularUnit(atoms: [.S, .O], charge: -2, subscripts: [1,4])
+    let carbonate = MolecularUnit(atoms: [.C, .O], charge: -2, subscripts: [1,3])
+    let phosphate = MolecularUnit(atoms: [.P, .O], charge: -3, subscripts: [1,4])
+    let sulfite = MolecularUnit(atoms: [.S, .O], charge: -2, subscripts: [1,3])
+    let sulfide = MolecularUnit(atoms: [.S], charge: -2, subscripts: [1])
+    let borate = MolecularUnit(atoms: [.B, .O], charge: -3, subscripts: [1,3])
+    let arsenate = MolecularUnit(atoms: [.As, .O], charge: -3, subscripts: [1,4])
+    
+    var knownPrecAnions : [MolecularUnit] = []
+    
+    var cations : [MolecularUnit] = []
+    var anions : [MolecularUnit] = []
     
     init(reactants: [Reagent]) {
-        self.reactants = reactants
+        for reactant in reactants {
+            for molecularUnit in reactant.components {
+                self.reactants.append(molecularUnit)
+            }
+        }
         self.knownPrecAnions = [chloride, bromide, iodide, sulfate, carbonate, phosphate, sulfite, sulfide, borate, arsenate]
     }
     
     func getRxn() {
         //MnSO4 + K2CO3 -> MnCO3 + SO4 + 2K
         //result aray = reactants[0] split into two and split reactants[1] into two
-        var arr : [Reagent] = []
-        for reactant in reactants {
-            for molecularUnit in reactant.components {
-                arr.append(Reagent(components: [molecularUnit]))
-            }
-        }
-        reactants = arr
+        let reactantUnits : [MolecularUnit] = []
         
-        for reactant in reactants {
-            if reactant.components[0].charge < 0 {
+        for reactant in reactantUnits {
+            if reactant.charge < 0 {
                 anions.append(reactant)
             }
             else {
@@ -67,20 +68,20 @@ class Reaction {
         let nonAlkali = getNonAlkali()
         let precipitableAnions = getPreciptableAnions()
         
-        var nonSpectators : [Reagent] = []
+        var nonSpectators : [MolecularUnit] = []
         
         for metal in nonAlkali {
-            if metal.components[0].atoms[0] == .Ba {
+            if metal.atoms[0] == .Ba {
                 if precipitableAnions.contains(sulfate) {
-                    products.append(Reagent(components: barium.components + sulfate.components))
-                    nonSpectators.append(barium)
+                    products.append(Reagent(components: [barium, sulfate], superscripts: [2,1]))
+                    nonSpectators.append(barium) 
                     nonSpectators.append(sulfate)
                 }
             }
             else {
                 for anion in precipitableAnions {
                     for metal in nonAlkali {
-                        products.append(Reagent(components: metal.components + anion.components))
+                        products.append(Reagent(components: [metal, anion], superscripts: []))
                         nonSpectators.append(metal)
                         nonSpectators.append(anion)
                     }
@@ -90,7 +91,7 @@ class Reaction {
         
         for reactant in reactants {
             if !nonSpectators.contains(reactant) {
-                products.append(reactant)
+                products.append(Reagent(components: [reactant], superscripts: [1]))
             }
         }
         
@@ -111,8 +112,8 @@ class Reaction {
         
     }
     
-    func getPreciptableAnions() -> [Reagent] {
-        var precip : [Reagent] = []
+    func getPreciptableAnions() -> [MolecularUnit] {
+        var precip : [MolecularUnit] = []
         
 //        if reactants.contains(chloride) { precip.append(chloride) }
 //        if reactants.contains(bromide) { precip.append(bromide) }
@@ -134,9 +135,9 @@ class Reaction {
         return precip
     }
     
-    func getNonAlkali() -> [Reagent] {
+    func getNonAlkali() -> [MolecularUnit] {
         //TODO: implement more efficient version with hashset
-        var nonAlkali : [Reagent] = []
+        var nonAlkali : [MolecularUnit] = []
         
 //        if reactants.contains(manganese) { nonAlkali.append(manganese) }
 //        if reactants.contains(lead) { nonAlkali.append(lead) }
@@ -145,7 +146,7 @@ class Reaction {
 //        if reactants.contains(barium) { nonAlkali.append(barium) }
 
         for cation in cations {
-            if alkali.contains(cation.components[0].atoms[0].rawValue) {
+            if alkali.contains(cation.atoms[0].rawValue) {
                 nonAlkali.append(cation)
             }
         }

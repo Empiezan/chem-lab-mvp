@@ -16,9 +16,22 @@ class Reagent : Equatable {
     var molarity : Float = 0.1
     var volume : Float = 50
     var container : Glassware!
+    var subscripts : [Int]!
     
-    init(components: [MolecularUnit]) {
+    init(components: [MolecularUnit], subscripts: String) {
         self.components = components
+        
+        var scripted : [Int] = []
+        for sub in subscripts.split(separator: ",") {
+            scripted.append(Int(sub)!)
+        }
+        
+        self.subscripts = scripted
+    }
+    
+    init(components: [MolecularUnit], superscripts: [Int]) {
+        self.components = components
+        self.subscripts = superscripts
     }
     
     func toString() -> NSMutableAttributedString {
